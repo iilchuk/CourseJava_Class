@@ -1,4 +1,4 @@
-package Hometask_2;
+package Hometask_1;
 
 public class Animal {
     private String name;

@@ -1,6 +1,4 @@
-package Hometask_2;
-
-import java.util.Arrays;
+package Hometask_1;
 
 public class Robot {
     public void work(){
