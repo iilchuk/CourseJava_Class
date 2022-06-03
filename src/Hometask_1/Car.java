@@ -16,7 +16,12 @@ public class Car {
         this.body = b;
     }
 
-    public String getIngineType(){
+    @Override
+    public String toString() {
+        return this.color + "/" + this.ingineType + this.helm + this.wheel + this.body;
+    }
+
+    public String getIngineType() {
         return ingineType;
     }
 
@@ -24,7 +29,7 @@ public class Car {
         this.ingineType = type;
     }
 
-    public String getColor(){
+    public String getColor() {
         return color;
     }
 
@@ -32,7 +37,7 @@ public class Car {
         this.color = color;
     }
 
-    public Helm getHelm(){
+    public Helm getHelm() {
         return helm;
     }
 
@@ -40,7 +45,7 @@ public class Car {
         this.helm = h;
     }
 
-    public Wheel getWheel(){
+    public Wheel getWheel() {
         return wheel;
     }
 
@@ -48,17 +53,12 @@ public class Car {
         this.wheel = w;
     }
 
-    public Body getBody(){
+    public Body getBody() {
         return body;
     }
 
     public void setBody(Body b) {
         this.body = b;
-    }
-
-    @Override
-    public String toString() {
-        return this.color + "/" + this.ingineType + this.helm + this.wheel + this.body;
     }
 
     public static void main(String[] args) {
@@ -82,89 +82,91 @@ public class Car {
     }
 }
 
-class Helm{
+class Helm {
 
     private int diameter;
 
-    public int getDiameter(){
+    @Override
+    public String toString() {
+        return "/HELM/D:" + String.valueOf(this.diameter);
+    }
+
+    public int getDiameter() {
         return diameter;
     }
 
-    public void setDiameter(int d){
+    public void setDiameter(int d) {
         diameter = d;
-    }
-
-    @Override
-    public String toString() {
-        return "/HELM/D:"+String.valueOf(this.diameter);
     }
 
 }
 
-class Wheel{
+class Wheel {
 
     private int width;
     private int radius;
 
-    public int getWidth(){
-        return width;
-    }
-
-    public void setWidth(int w){
-        width = w;
-    }
-
-    public int getRadius(){
-        return radius;
-    }
-
-    public void setRadius(int r){
-        radius = r;
-    }
-
-    public void ChangeWheelRadius(int n){
-        this.radius = this.radius*n;
+    public void ChangeWheelRadius(int n) {
+        this.radius = this.radius * n;
     }
 
     @Override
     public String toString() {
-        return "/Wheel/W:"+String.valueOf(this.width)+"/R:"+String.valueOf(this.radius);
+        return "/Wheel/W:" + String.valueOf(this.width) + "/R:" + String.valueOf(this.radius);
     }
+
+    public int getWidth() {
+        return width;
+    }
+
+    public void setWidth(int w) {
+        width = w;
+    }
+
+    public int getRadius() {
+        return radius;
+    }
+
+    public void setRadius(int r) {
+        radius = r;
+    }
+
 }
 
-class Body{
+class Body {
 
     private int width;
     private int length;
     private int height;
 
-    public int getWidth(){
+    @Override
+    public String toString() {
+        return "/Body/W:" + String.valueOf(this.width) + "/L:" + String.valueOf(this.length) + "/H:" + String.valueOf(this.height);
+    }
+
+    public int getWidth() {
         return width;
     }
 
-    public void setWidth(int w){
+    public void setWidth(int w) {
         width = w;
     }
 
-    public int getLength(){
+    public int getLength() {
         return length;
     }
 
-    public void setLength(int l){
+    public void setLength(int l) {
         length = l;
     }
 
-    public int getHeight(){
+    public int getHeight() {
         return height;
     }
 
-    public void setHeight(int h){
+    public void setHeight(int h) {
         height = h;
     }
 
-    @Override
-    public String toString() {
-        return "/Body/W:"+String.valueOf(this.width)+"/L:"+String.valueOf(this.length)+"/H:"+String.valueOf(this.height);
-    }
 }
 

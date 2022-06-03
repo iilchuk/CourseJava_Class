@@ -8,7 +8,7 @@ public interface Salary {
 
 }
 
-class EmployeeHour implements Salary{
+class EmployeeHour implements Salary {
 
     private int hourPrice = 25;
 
@@ -16,9 +16,10 @@ class EmployeeHour implements Salary{
     public void salary() {
         System.out.println("Працівник з погодинною зарплатою: " + hourPrice);
     }
+
 }
 
-class EmployeeRate implements Salary{
+class EmployeeRate implements Salary {
 
     private int rate = 2500;
 
@@ -26,6 +27,7 @@ class EmployeeRate implements Salary{
     public void salary() {
         System.out.println("Працівник з фіксованою місячною зарплатою: " + rate);
     }
+    
 }
 
 class Main {
